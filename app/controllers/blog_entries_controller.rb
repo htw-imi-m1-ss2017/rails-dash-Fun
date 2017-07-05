@@ -10,6 +10,12 @@ class BlogEntriesController < ApplicationController
   # GET /blog_entries/1
   # GET /blog_entries/1.json
   def show
+    @issue = @blog_entry.issue
+    if @issue
+      @issue_headline = @issue.headline
+    else
+      @issue_headline = "No associated issue"
+    end
   end
 
   # GET /blog_entries/new

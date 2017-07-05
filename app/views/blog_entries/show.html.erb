@@ -1,9 +1,11 @@
 <p id="notice"><%= notice %></p>
 <p>
   <strong>Issue:</strong>
-  <%= @blog_entry.issue.headline %>
+  <%= @issue_headline %>
+  <% if @issue %>
 <br/>and for demonstration with a link:<br/>
   <%= link_to @blog_entry.issue.headline, @blog_entry.issue %>
+  <% end %>
 </p>
 <p>
   <strong>Title:</strong>
