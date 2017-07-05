@@ -10,6 +10,7 @@ class IssuesController < ApplicationController
   # GET /issues/1
   # GET /issues/1.json
   def show
+    @blog_entries = @issue.blog_entries
   end
 
   # GET /issues/new
